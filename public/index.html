@@ -1,0 +1,48 @@
+<!-- index.html -->
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="usMap">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Node/Angular US Map</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+    <style>
+        html                    { overflow-y:scroll; }
+        body                    { padding-top:50px; }
+    </style>
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <script src="core.js"></script>
+
+</head>
+<body ng-controller="mainController">
+    <div class="container">
+        
+        <!-- FORM TO CONNECT TO JIRA -->
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+
+
+                        <input type="text" class="form-control input-lg text-center" placeholder="username" ng-model="loginData.username">
+                        <input type="password" class="form-control input-lg text-center" placeholder="password" ng-model="loginData.password">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary btn-lg" ng-click="loginJira()">Authenticate</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
